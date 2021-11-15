@@ -5,12 +5,10 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("http://apl001.prosesmt.com.br:8080/api/customers")
-      .then((res) => {
-        console.log(res.data);
-        setData(res.data);
-      });
+    axios.get("https://api.taskip.com.br:8080/api/customers").then((res) => {
+      console.log(res.data);
+      setData(res.data);
+    });
   }, []);
 
   return (
